@@ -4,6 +4,11 @@ const Button = ({ handleClick, text }) => <button onClick={handleClick}>{text}</
 
 const Statistics = ({good, neutral, bad }) => {
   const total = good + neutral + bad;
+
+  if(total === 0) {
+    return <p>No feedback given</p>
+  }
+
   return (
     <div>
       <h3>statistics</h3>
